@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="user_service" />
+        <module name="order_service" />
+        <module name="pay_service" />
+        <module name="eureka_server_peer3" />
+        <module name="config_server_peer2" />
+        <module name="eureka_server_peer2" />
+        <module name="config_server_peer1" />
+        <module name="eureka_server_peer1" />
+        <module name="item_service" />
+        <module name="spring_cloud_gateway" />
+        <module name="trends_service" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="config_server" target="17" />
+      <module name="untitled" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="config_server" options="-parameters" />
+      <module name="config_server_peer1" options="-parameters" />
+      <module name="config_server_peer2" options="-parameters" />
+      <module name="eureka_server_peer1" options="-parameters" />
+      <module name="eureka_server_peer2" options="-parameters" />
+      <module name="eureka_server_peer3" options="-parameters" />
+      <module name="item_service" options="-parameters" />
+      <module name="order_service" options="-parameters" />
+      <module name="pay_service" options="-parameters" />
+      <module name="spring_cloud_gateway" options="-parameters" />
+      <module name="trends_service" options="-parameters" />
+      <module name="untitled" options="-parameters" />
+      <module name="user_service" options="-parameters" />
+    </option>
+  </component>
+</project>

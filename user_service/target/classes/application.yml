@@ -1,0 +1,25 @@
+# server
+server:
+  port: 8002
+# spring
+spring:
+  application:
+    name: user-service
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/dewu
+    username: root
+    password: syc8326190
+# eureka
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eureka-peer1:8761/eureka/
+#      ,http://eureka-peer2:8762/eureka/,http://eureka-peer3:8763/eureka/
+      instance:
+        status-page-url-path: /info
+        instanceId: ${spring.application.name}:${random.value}
+        prefer-ip-address: true
+        registry-fetch-interval-seconds: 30
+        lease-renewal-interval-in-seconds: 15
+        lease-expiration-duration-in-seconds: 15

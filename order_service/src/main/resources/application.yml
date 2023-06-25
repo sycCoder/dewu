@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: order-service
+  config:
+    import: optional:configserver:none
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: syc8326190
+    url: jdbc:mysql://localhost:3306/dewu
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eureka-peer1:8761/eureka/
+      #      ,http://eureka-peer2:8762/eureka/,http://eureka-peer3:8763/eureka/
+      instance:
+        status-page-url-path: /info
+        instanceId: ${spring.application.name}:${random.value}
+        prefer-ip-address: true
+        registry-fetch-interval-seconds: 30
+        lease-renewal-interval-in-seconds: 15
+        lease-expiration-duration-in-seconds: 15
+
+# 远程配置文件
+#  cloud:
+#    config:
+#      discovery:
+#        enabled: true
+#        service-id: config-server
+#      name: config-single-client
+#      label: main
+#      profile: dev

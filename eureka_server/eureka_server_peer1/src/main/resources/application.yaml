@@ -1,0 +1,16 @@
+server:
+  port: 8761
+
+spring:
+  application:
+    name: eureka-peer1
+
+eureka:
+  client:
+    # 是否注册到eureka
+    register-with-eureka: false
+    # 是否从eureka获取注册信息
+    fetch-registry: false
+#    集群配置
+#    service-url:
+#      defaultZone: http://eureka-peer2:8762/eureka/,http://eureka-peer3:8763/eureka/
